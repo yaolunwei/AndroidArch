@@ -12,10 +12,11 @@ dependencies {
 }
 
 publish {
+    repoName = 'maven'
     userOrg = 'bigoat'
     groupId = 'com.bigoat.android'
     artifactId = 'arch'
-    publishVersion = '0.0.2'
+    publishVersion = '0.0.8'
     desc = 'This is android component arch.'
     website = 'https://github.com/yaolunwei/AndroidArch'
 }

@@ -1,1 +1,1 @@
-include ':arch', ':component1', ':app', ':component2', ':component3', ':component4', ':library1'
+include ':arch', ':app', ':library'
