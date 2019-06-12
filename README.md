@@ -14,21 +14,21 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         // 添加脚本依赖
-        classpath 'cc.lecent.plugin:android:1.0.0'
+        classpath 'com.bigoat.andrid:arch:0.0.1'
     }
 }
 
 ......
 
 // 应用配置
-apply plugin: 'cc.lecent.android.config'
+apply plugin: 'com.bigoat.andrid.config'
 
 // 全局配置
 config {
 	// Debug
 	debug false
 	// 应用ID(必须)
-    applicationId 'cc.lecent.demo'
+    applicationId 'com.bigoat.demo'
     // 主应用Module(必须)
     mainApp 'app'
 }
@@ -36,7 +36,7 @@ config {
 
 **二、主Module配置**
 ```groovy
-apply plugin: 'cc.lecent.android.app'
+apply plugin: 'com.bigoat.andrid.app'
 ```
 *默认依赖项目所有`Module` and `Library`当`debug true`时*
 
@@ -48,7 +48,7 @@ apply plugin: 'cc.lecent.android'
 
 **四、Library配置**
 ```groovy
-apply plugin: 'cc.lecent.android.lib'
+apply plugin: 'com.bigoat.andrid.lib'
 ```
 
 ## 说明
@@ -65,7 +65,7 @@ config {
 	compileSdkVersion 28
 	
 	// 应用唯一ID(必须)
-	applicationId 'cc.lecent.demo'
+	applicationId 'com.bigoat.demo'
 	
 	// 最小支持版本
 	minSdkVersion 19
@@ -98,7 +98,7 @@ config {
 
 例如：
 ```groovy
-apply plugin: 'cc.lecent.android'
+apply plugin: 'com.bigoat.andrid'
 
 android {
     compileSdkVersion 29
@@ -117,7 +117,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.bigoat:buxbox:1.0.0'
+    implementation 'com.bigoat.android:bbc:0.0.1'
 }
 
 ```
@@ -130,7 +130,7 @@ dependencies {
 
 #### v1.0.0
 ```groovy
-classpath 'cc.lecent.plugin:android:1.0.0'
+classpath 'com.bigoat.andrid:arch:0.0.1'
 ```
 
 - minSdkVersion `19`
@@ -146,5 +146,4 @@ classpath 'cc.lecent.plugin:android:1.0.0'
 - 默认启用`dataBinding`
 - 默认使用 `Java1.8`
 - 增加仓库地址 <br>
-`maven { url "http://maven.jxwd.me/nexus/content/repositories/android-releases" }` <br>
 `maven { url "https://jitpack.io" }`
