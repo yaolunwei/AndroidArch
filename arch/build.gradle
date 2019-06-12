@@ -12,25 +12,10 @@ dependencies {
 }
 
 publish {
-    repoName = 'maven'
     userOrg = 'bigoat'
     groupId = 'com.bigoat.android'
     artifactId = 'arch'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = 'This is android component arch.'
-    website = 'https://www.github.com/yaolunwei/AndroidArch'
-}
-
-// ./gradlew uploadArchives 上传Lecent到maven仓库 for linux and mac
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "http://maven.jxwd.me/nexus/content/repositories/android-releases/") {
-                authentication(userName: "dev_user", password: "12345678")
-            }
-            pom.groupId = 'cc.lecent.plugin'
-            pom.artifactId = 'android'
-            pom.version = '1.0.0'
-        }
-    }
+    website = 'https://github.com/yaolunwei/AndroidArch'
 }
