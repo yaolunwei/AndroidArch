@@ -28,9 +28,9 @@ config {
 	// Debug
 	debug false
 	// 应用ID(必须)
-    applicationId 'com.bigoat.demo'
-    // 主应用Module(必须)
-    mainApp 'app'
+        applicationId 'com.bigoat.demo'
+    	// 主应用Module(必须)
+    	mainApp 'app'
 }
 ```
 
@@ -71,22 +71,22 @@ config {
 	minSdkVersion 19
 	
 	// 最大支持版本
-    targetSdkVersion 28
+    	targetSdkVersion 28
 
 	// 应用版本号
-    versionCode 1
+    	versionCode 1
     
-    // 应用版本号名称
-    versionName '1.0'
+    	// 应用版本号名称
+    	versionName '1.0'
 
 	// 依赖版本号	
-    appcompatVersion '28.0.0'
-    constraintVersion '1.1.3'
-    junitVersion '4.12'
-    arouterApiVersion '1.4.1'
-    arouterCompilerVersion '1.2.2'
-    lifecycleVersion '1.1.1'
-    bbcVersion '1.0.0'
+    	appcompatVersion '28.0.0'
+    	constraintVersion '1.1.3'
+    	junitVersion '4.12'
+    	arouterApiVersion '1.4.1'
+    	arouterCompilerVersion '1.2.2'
+    	lifecycleVersion '1.1.1'
+    	bbcVersion '1.0.0'
 }
 ```
 
