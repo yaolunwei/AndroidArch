@@ -64,7 +64,7 @@ class ConfigExtension {
 
 
     @Override
-    public String toString() {
+    String toString() {
         return "ConfigExtension {" +
                 "\n debug=" + debug +
                 "\n applicationId='" + applicationId + '\'' +
@@ -130,6 +130,5 @@ class ConfigPlugin implements Plugin<Project> {
                 println config
             }
         }
-
     }
 }

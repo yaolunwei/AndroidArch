@@ -93,10 +93,11 @@ class AndroidProjectAppPlugin implements Plugin<Project> {
 
             if(project == config.mainApp && !config.debug) {
                 config.libs.each {
-                    implementation it
+                    if (it.name != 'arch') {
+                        implementation it
+                    }
                 }
             }
         }
-
     }
 }

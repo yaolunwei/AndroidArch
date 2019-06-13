@@ -1,5 +1,13 @@
 apply plugin: AndroidProjectLibPlugin
 
+android {
+
+}
+
+dependencies {
+
+}
+
 
 /*************** Lib *****************/
 
