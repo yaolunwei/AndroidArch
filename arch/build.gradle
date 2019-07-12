@@ -11,12 +11,21 @@ dependencies {
     compile gradleApi()
 }
 
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri("../repos"))
+        pom.groupId = "com.bigoat.android"
+        pom.artifactId = "arch"
+        pom.version = "0.0.24"
+    }
+}
+
 publish {
     repoName = 'maven'
     userOrg = 'bigoat'
     groupId = 'com.bigoat.android'
     artifactId = 'arch'
-    publishVersion = '0.0.8'
+    publishVersion = '0.0.25'
     desc = 'This is android component arch.'
     website = 'https://github.com/yaolunwei/AndroidArch'
 }

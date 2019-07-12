@@ -1,1 +1,4 @@
-include ':arch', ':app', ':library'
+include ':arch',':app', ':library', ":module"
+
+//include ':arch', ':app'
+

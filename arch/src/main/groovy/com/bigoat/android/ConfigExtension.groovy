@@ -3,7 +3,6 @@ package com.bigoat.android
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-
 class ConfigExtension {
     // 开发配置
     boolean debug = false
@@ -34,9 +33,8 @@ class ConfigExtension {
 
     List<Project> libs = new ArrayList<>()
 
-
     @Override
-    public String toString() {
+    String toString() {
         return "ConfigExtension {" +
                 "\n debug=" + debug +
                 "\n applicationId='" + applicationId + '\'' +
@@ -56,7 +54,7 @@ class ConfigExtension {
                 "\n bbcVersion='" + bbcVersion + '\'' +
                 "\n uiVersion='" + uiVersion + '\'' +
                 "\n libs=" + libs +
-                "\n}\n";
+                "\n}\n"
     }
 }
 
@@ -89,7 +87,9 @@ class ConfigPlugin implements Plugin<Project> {
                     if(config.mainApp == sub.name) {
                         config.mainApp = sub
                     } else {
-                        config.libs.add(sub)
+                        if (sub.name != 'arch') {
+                            config.libs.add(sub)
+                        }
                     }
                 }
 
@@ -97,7 +97,24 @@ class ConfigPlugin implements Plugin<Project> {
                     throw new IllegalArgumentException("请配置正确的主应用(mainApp). \n $config.mainApp is not found")
                 }
 
-                println "\n主应用: $config.mainApp.name \n依赖项目: $config.libs \n"
+                // 加载资源 TODO
+                /**
+                Properties properties = new Properties()
+                InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream() ;
+                properties.load( inputStream )
+                //  读取文件
+                //  def sdkDir = properties.getProperty('key.file')
+                //  storeFile file( sdkDir )
+                // 读取字段
+                def debug = properties.getProperty('arch.debug')
+                if (debug != null) {
+                    try {
+                        config.debug = Boolean.parseBoolean(debug)
+                    } catch(Exception e){
+                        e.printStackTrace()
+                    }
+                }
+                **/
 
                 println config
             }
