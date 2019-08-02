@@ -10,12 +10,11 @@ class ConfigExtension {
     // 安卓配置
     String applicationId = null
     def mainApp = null
-    int minSdkVersion = 21
+    int minSdkVersion = 19
     int compileSdkVersion = 28
     int targetSdkVersion = 28
     int versionCode = 1
     String versionName = "1.0"
-
 
     // 必须依赖
     String appcompatVersion = "28.0.0"
@@ -23,10 +22,10 @@ class ConfigExtension {
     String designVersion = "28.0.0"
     String junitVersion = "4.12"
 
+    String lifecycleVersion = "1.1.1"
+
     String arouterApiVersion = null
     String arouterCompilerVersion = null
-
-    String lifecycleVersion = "1.1.1"
 
     String bbcVersion = null
     String uiVersion = null
